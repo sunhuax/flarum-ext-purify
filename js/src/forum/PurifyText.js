@@ -17,7 +17,6 @@ export default function () {
   };
 
   var FlarumPurify = app.forum.attribute('addItemToArray').split(',');
-  console.log(FlarumPurify);
 
   $('p').html(function (i, txt) {
     // reiteriamo per tutte le parole

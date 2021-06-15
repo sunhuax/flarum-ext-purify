@@ -2,7 +2,10 @@
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg) [![Latest Stable Version](https://img.shields.io/packagist/v/justoverclock/flarum-ext-purify.svg)](https://packagist.org/packages/justoverclock/flarum-ext-purify) [![Total Downloads](https://img.shields.io/packagist/dt/justoverclock/flarum-ext-purify.svg)](https://packagist.org/packages/justoverclock/flarum-ext-purify)
 
-A [Flarum](http://flarum.org) extension. Bad words filter for post
+A [Flarum](http://flarum.org) extension. Bad words filter for post, easily managed through admin settings.
+
+![1](https://user-images.githubusercontent.com/79002016/122103444-ea462500-ce16-11eb-97e5-393aef2e64d2.png)
+
 
 ### Installation
 
@@ -23,5 +26,8 @@ php flarum cache:clear
 ### Links
 
 - [Packagist](https://packagist.org/packages/justoverclock/flarum-ext-purify)
-- [GitHub](https://github.com/justoverclock/flarum-ext-purify)
-- [Discuss](https://discuss.flarum.org/d/PUT_DISCUSS_SLUG_HERE)
+- [GitHub](https://github.com/justoverclockl/flarum-ext-purify)
+
+### Demo Video
+
+https://streamable.com/1mst5n

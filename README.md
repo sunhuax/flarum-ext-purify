@@ -1,6 +1,6 @@
 # Purify
 
-![License](https://img.shields.io/badge/license-MIT-blue.svg) [![Latest Stable Version](https://img.shields.io/packagist/v/justoverclock/flarum-ext-purify.svg)](https://packagist.org/packages/justoverclock/flarum-ext-purify) [![Total Downloads](https://img.shields.io/packagist/dt/justoverclock/flarum-ext-purify.svg)](https://packagist.org/packages/justoverclock/flarum-ext-purify)
+![License](https://img.shields.io/badge/license-MIT-blue.svg) [![Latest Stable Version](http://poser.pugx.org/justoverclock/flarum-ext-purify/v)](https://packagist.org/packages/justoverclock/flarum-ext-purify) [![Total Downloads](http://poser.pugx.org/justoverclock/flarum-ext-purify/downloads)](https://packagist.org/packages/justoverclock/flarum-ext-purify)
 
 A [Flarum](http://flarum.org) extension. Bad words filter for post, easily managed through admin settings.
 

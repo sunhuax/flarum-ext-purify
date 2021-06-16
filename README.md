@@ -19,7 +19,6 @@ composer require justoverclock/flarum-ext-purify:"*"
 
 ```sh
 composer update justoverclock/flarum-ext-purify:"*"
-php flarum migrate
 php flarum cache:clear
 ```
 

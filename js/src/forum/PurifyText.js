@@ -21,7 +21,7 @@ export default function () {
   $('p').html(function (i, txt) {
     // reiteriamo per tutte le parole
     for (var i = 0; i < FlarumPurify.length; i++) {
-      var pattern = new RegExp('\\b' + FlarumPurify[i] + '\\b', 'g');
+      var pattern = new RegExp('\\b' + FlarumPurify[i] + '\\b', 'gi');
       // Creazione della stringa di '*' equivalente alla lunghezza della parola stessa
       var replacement = '*'.repeat(FlarumPurify[i].length);
 

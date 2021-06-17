@@ -8,7 +8,6 @@
  * file that was distributed with this source code.
  */
 
-
 import app from 'flarum/forum/app';
 import { extend } from 'flarum/common/extend';
 import CommentPost from 'flarum/forum/components/CommentPost';

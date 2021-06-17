@@ -8,7 +8,6 @@
  * file that was distributed with this source code.
  */
 
-
 import app from 'flarum/forum/app';
 
 export default function () {
@@ -29,4 +28,13 @@ export default function () {
     }
     return txt;
   });
+
+  if (app.forum.attribute('AlsoEmail') === true) {
+    const p = this.$('p');
+    const HideEmail = /([a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9_-]+)/gi;
+
+    p.each((index, element) => {
+      $(element).html($(element).text().replace(HideEmail, '******@*****'));
+    });
+  }
 }

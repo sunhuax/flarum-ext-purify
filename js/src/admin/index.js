@@ -8,7 +8,6 @@
  * file that was distributed with this source code.
  */
 
-
 import app from 'flarum/app';
 
 app.initializers.add('justoverclock/flarum-ext-purify', () => {
@@ -19,5 +18,10 @@ app.initializers.add('justoverclock/flarum-ext-purify', () => {
     label: app.translator.trans('flarum-ext-purify.admin.additem'),
     help: app.translator.trans('flarum-ext-purify.admin.additemdesc'),
     placeholder: 'word1,word2,word3',
+  });
+  app.extensionData.for('justoverclock-purify').registerSetting({
+    setting: 'justoverclock-purify.AlsoEmail',
+    label: app.translator.trans('flarum-ext-purify.admin.hidemail'),
+    type: 'boolean',
   });
 });

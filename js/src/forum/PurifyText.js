@@ -34,7 +34,9 @@ export default function () {
     const HideEmail = /([a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9_-]+)/gi;
 
     p.each((index, element) => {
-      $(element).html($(element).text().replace(HideEmail, '******@*****'));
+      $(element)
+        .html($(element)
+          .html().replace(HideEmail, '******@*****'));
     });
   }
 }

@@ -1,8 +1,8 @@
 # Purify
 
-![License](https://img.shields.io/badge/license-MIT-blue.svg) [![Latest Stable Version](http://poser.pugx.org/justoverclock/flarum-ext-purify/v)](https://packagist.org/packages/justoverclock/flarum-ext-purify) [![Total Downloads](http://poser.pugx.org/justoverclock/flarum-ext-purify/downloads)](https://packagist.org/packages/justoverclock/flarum-ext-purify)
+![License](https://img.shields.io/badge/license-MIT-blue.svg) [![Latest Stable Version](https://poser.pugx.org/justoverclock/flarum-ext-purify/v)](https://packagist.org/packages/justoverclock/flarum-ext-purify) [![Total Downloads](https://poser.pugx.org/justoverclock/flarum-ext-purify/downloads)](https://packagist.org/packages/justoverclock/flarum-ext-purify)
 
-A [Flarum](http://flarum.org) extension. Bad words filter for post, easily managed through admin settings.
+A [Flarum](https://flarum.org) extension. Bad words filter for post, easily managed through admin settings.
 
 ![1](https://user-images.githubusercontent.com/79002016/122103444-ea462500-ce16-11eb-97e5-393aef2e64d2.png)
 

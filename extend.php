@@ -25,5 +25,8 @@ return [
     new Extend\Locales(__DIR__.'/resources/locale'),
     (new Extend\Settings)
         ->serializeToForum('addItemToArray', 'justoverclock-purify.addItemToArray'),
+    (new Extend\Settings)
+        ->serializeToForum('regexcustom', 'justoverclock-purify.regexcustom'),
     (new Extend\Settings())->serializeToForum('AlsoEmail', 'justoverclock-purify.AlsoEmail', 'boolval', false),
+    (new Extend\Settings())->serializeToForum('CustomRegexp', 'justoverclock-purify.CustomRegexp', 'boolval', false),
 ];

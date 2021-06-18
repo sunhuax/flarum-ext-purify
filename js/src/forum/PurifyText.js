@@ -28,7 +28,6 @@ export default function () {
     }
     return txt;
   });
-
   if (app.forum.attribute('AlsoEmail') === true) {
     const p = this.$('p');
     const HideEmail = /([a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9_-]+)/gi;
@@ -37,6 +36,17 @@ export default function () {
       $(element)
         .html($(element)
           .html().replace(HideEmail, '******@*****'));
+    });
+  }
+  if (app.forum.attribute('CustomRegexp') === true) {
+    const p = this.$('p');
+    const CustomRegexP = new RegExp('' + app.forum.attribute('regexcustom'), 'gi');
+    const obscureMe = app.translator.trans('flarum-ext-purify.forum.obscure');
+
+    p.each((index, element) => {
+      $(element)
+        .html($(element)
+          .html().replace(CustomRegexP, (match) => ` ${obscureMe}`))
     });
   }
 }

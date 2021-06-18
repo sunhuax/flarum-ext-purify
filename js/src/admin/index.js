@@ -24,4 +24,17 @@ app.initializers.add('justoverclock/flarum-ext-purify', () => {
     label: app.translator.trans('flarum-ext-purify.admin.hidemail'),
     type: 'boolean',
   });
+  app.extensionData.for('justoverclock-purify').registerSetting({
+    setting: 'justoverclock-purify.CustomRegexp',
+    label: app.translator.trans('flarum-ext-purify.admin.customreg'),
+    type: 'boolean',
+  });
+  app.extensionData.for('justoverclock-purify').registerSetting({
+    setting: 'justoverclock-purify.regexcustom',
+    name: 'regexcustom',
+    type: 'text',
+    label: app.translator.trans('flarum-ext-purify.admin.customregexp'),
+    help: app.translator.trans('flarum-ext-purify.admin.customregexpdesc'),
+    placeholder: '(word1|word2|word3)',
+  });
 });

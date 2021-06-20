@@ -5,6 +5,7 @@
 A [Flarum](https://flarum.org) extension. Bad words filter for post, easily managed through admin settings.
 
 ![1](https://user-images.githubusercontent.com/79002016/122103444-ea462500-ce16-11eb-97e5-393aef2e64d2.png)
+![2](https://i.ibb.co/NYwJcfK/Immagine-2021-06-17-231701.png)
 
 
 ### Installation

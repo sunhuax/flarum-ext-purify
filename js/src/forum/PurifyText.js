@@ -16,18 +16,21 @@ export default function () {
   };
 
   var FlarumPurify = app.forum.attribute('addItemToArray').split(',');
+  if (FlarumPurify === ""){
+    return;
+  } else {
+    $('p').html(function (i, txt) {
+      // reiteriamo per tutte le parole
+      for (var i = 0; i < FlarumPurify.length; i++) {
+        var pattern = new RegExp('\\b' + FlarumPurify[i] + '\\b', 'gi');
+        // Creazione della stringa di '*' equivalente alla lunghezza della parola stessa
+        var replacement = '*'.repeat(FlarumPurify[i].length);
 
-  $('p').html(function (i, txt) {
-    // reiteriamo per tutte le parole
-    for (var i = 0; i < FlarumPurify.length; i++) {
-      var pattern = new RegExp('\\b' + FlarumPurify[i] + '\\b', 'gi');
-      // Creazione della stringa di '*' equivalente alla lunghezza della parola stessa
-      var replacement = '*'.repeat(FlarumPurify[i].length);
-
-      txt = txt.replace(pattern, replacement);
-    }
-    return txt;
-  });
+        txt = txt.replace(pattern, replacement);
+      }
+      return txt;
+    });
+  }
   if (app.forum.attribute('AlsoEmail') === true) {
     const p = this.$('p');
     const HideEmail = /([a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9_-]+)/gi;

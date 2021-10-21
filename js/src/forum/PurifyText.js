@@ -15,10 +15,8 @@ export default function () {
     return new Array(num + 1).join(this);
   };
 
-  var FlarumPurify = app.forum.attribute('addItemToArray').split(',');
-  if (FlarumPurify === ""){
-    return;
-  } else {
+  var FlarumPurify = (app.forum.attribute('addItemToArray') || '').split(',');
+
     $('p').html(function (i, txt) {
       // reiteriamo per tutte le parole
       for (var i = 0; i < FlarumPurify.length; i++) {
@@ -30,7 +28,7 @@ export default function () {
       }
       return txt;
     });
-  }
+
   if (app.forum.attribute('AlsoEmail') === true) {
     const p = this.$('p');
     const HideEmail = /([a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9_-]+)/gi;
@@ -38,7 +36,7 @@ export default function () {
     p.each((index, element) => {
       $(element)
         .html($(element)
-          .html().replace(HideEmail, '******@*****'));
+          .html().replace(HideEmail, '******@******'));
     });
   }
   if (app.forum.attribute('CustomRegexp') === true) {

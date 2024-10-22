@@ -12,10 +12,10 @@ import app from 'flarum/app';
 
 app.initializers.add('justoverclock/flarum-ext-purify', () => {
   app.extensionData.for('justoverclock-purify').registerSetting({
-    setting: 'justoverclock-purify.addItemToArray',
-    name: 'addItemToArray',
+    setting: 'justoverclock-purify.badWordsList',
+    name: 'badWordsList',
     type: 'text',
-    label: app.translator.trans('flarum-ext-purify.admin.additem'),
+    label: app.translator.trans('flarum-ext-purify.admin.badWords'),
     help: app.translator.trans('flarum-ext-purify.admin.additemdesc'),
     placeholder: 'word1,word2,word3',
   });
@@ -35,6 +35,6 @@ app.initializers.add('justoverclock/flarum-ext-purify', () => {
     type: 'text',
     label: app.translator.trans('flarum-ext-purify.admin.customregexp'),
     help: app.translator.trans('flarum-ext-purify.admin.customregexpdesc'),
-    placeholder: '(word1|word2|word3)',
+    placeholder: 'a custom regex (e.g. #\\((.*?)\\)#)',
   });
 });

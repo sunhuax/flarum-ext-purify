@@ -9,10 +9,4 @@
  */
 
 import app from 'flarum/forum/app';
-import { extend } from 'flarum/common/extend';
-import CommentPost from 'flarum/forum/components/CommentPost';
-import PurifyText from './PurifyText';
-
-app.initializers.add('justoverclock/flarum-ext-purify', () => {
-  extend(CommentPost.prototype, ['oncreate', 'onupdate'], PurifyText);
-});
+app.initializers.add('justoverclock/flarum-ext-purify', () => {});

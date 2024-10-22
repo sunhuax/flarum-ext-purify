@@ -13,7 +13,9 @@
 namespace Justoverclock\Purify;
 
 use Flarum\Extend;
-use Flarum\Api\Event\Serializing;
+use Justoverclock\Purify\Listeners\CustomPurifier;
+use Justoverclock\Purify\Listeners\ObscureBadWords;
+use Justoverclock\Purify\Listeners\ObscureEmail;
 
 return [
     (new Extend\Frontend('forum'))
@@ -23,10 +25,10 @@ return [
         ->js(__DIR__.'/js/dist/admin.js')
         ->css(__DIR__.'/resources/less/admin.less'),
     new Extend\Locales(__DIR__.'/resources/locale'),
-    (new Extend\Settings)
-        ->serializeToForum('addItemToArray', 'justoverclock-purify.addItemToArray'),
-    (new Extend\Settings)
-        ->serializeToForum('regexcustom', 'justoverclock-purify.regexcustom'),
-    (new Extend\Settings())->serializeToForum('AlsoEmail', 'justoverclock-purify.AlsoEmail', 'boolval', false),
-    (new Extend\Settings())->serializeToForum('CustomRegexp', 'justoverclock-purify.CustomRegexp', 'boolval', false),
+    (new Extend\Event())
+    ->subscribe(ObscureBadWords::class),
+    (new Extend\Event())
+    ->subscribe(ObscureEmail::class),
+    (new Extend\Event())
+        ->subscribe(CustomPurifier::class),
 ];

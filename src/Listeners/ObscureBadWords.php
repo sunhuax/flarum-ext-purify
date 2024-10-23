@@ -63,7 +63,7 @@ class ObscureBadWords
         foreach ($badWords as $badWord) {
             $badWord = trim($badWord);
             if (!empty($badWord)) {
-                $content = str_replace($badWord, str_repeat('*', strlen($badWord)), $content);
+                $content = preg_replace('/\b' . preg_quote($badWord, '/') . '\b/iu', str_repeat('*', strlen($badWord)), $content);
             }
         }
 
